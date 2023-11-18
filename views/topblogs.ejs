@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head') %>
+    <title>Home Page</title>
+</head>
+<body>
+    <%- include('./partials/nav') %>
+    
+    <table class="table table-striped table-responsive">
+        <thead>
+            <tr>
+                <th>Blog</th>
+                <th>Clicks</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% blogs.forEach(blog => { %>  
+                <tr>
+                    <td><%=blog.title%></td>
+                    <td><%=blog.clicks%></td>
+                </tr>
+           <% }); %>
+        </tbody>
+    </table>
+
+    <%- include('./partials/scripts') %>
+</body>
+</html>

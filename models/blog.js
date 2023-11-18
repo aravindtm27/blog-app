@@ -16,6 +16,11 @@ const blogSchema = new Schema({
     createdBy:{
         type: Schema.Types.ObjectId,
         ref: "bloguser",
+    },
+    clicks:{
+        type:Number,
+        required:true,
+        default:0,
     }
 },{timestamps:true}
 );
