@@ -17,7 +17,6 @@ const blogSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: "bloguser",
     }
-
 },{timestamps:true}
 );
 
