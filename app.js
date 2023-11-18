@@ -6,6 +6,7 @@ const userRoute = require("./routes/user.js");
 const blogRoute = require("./routes/blog.js");
 const mongoose = require("mongoose");
 const Blog = require("./models/blog.js");
+const topBlogsRoute = require("./routes/topblogs.js");
 
 const cookieParser = require("cookie-parser")
 const { checkForAuthenticationCookie } = require("./middlewares/authentication.js");
@@ -33,5 +34,7 @@ app.get("/", async (req,res)=>{
 
 app.use("/user",userRoute);
 app.use("/blog",blogRoute);
+app.use("/topblogs",topBlogsRoute);
+
 
 app.listen(PORT, ()=>console.log(`server started at :${PORT}`));
